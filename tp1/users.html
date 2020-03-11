@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Concepts</title>
+</head>
+<body>
+    <div>
+        <table>
+            <tr>
+                <th>Firstname</th>
+                <th>Lastname</th>
+                <th>Mail</th>
+                <th>Phone</th>
+                <th colspan="3">
+                    Actions<br>
+                    View Edit Delete
+                </th>
+            </tr>
+            <tr>
+                <td>Pedro</td>
+                <td>Colunga</td>
+                <td>xx@yy.com</td>
+                <td>1153107654</td>
+                <td>
+                    <img width="20" src="view.png" alt="view"/>
+                </td>
+                <td>
+                    <img width="20" src="edit.png" alt="edit"/>
+                </td>
+                <td>
+                    <img width="20" src="delete.png" alt="delete"/>
+                </td>
+            </tr>
+            <tr>
+                <td>Agustín</td>
+                <td>López Gabeiras</td>
+                <td>yy@xx.com</td>
+                <td>1153107654</td>
+                <td>
+                    <img width="20" src="view.png" alt="view"/>
+                </td>
+                <td>
+                    <img width="20" src="edit.png" alt="edit"/>
+                </td>
+                <td>
+                    <img width="20" src="delete.png" alt="delete"/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div>
+        <form>
+            <h5>Persona</h5>
+            <label>
+                <input type="text" placeholder="Nombre"/>
+            </label>
+            <label>
+                <input type="text" placeholder="Apellido">
+            </label>
+            <label>
+                <input type="text" placeholder="Mail">
+            </label>
+            <label>
+                <input type="number" placeholder="Telefono">
+            </label>
+            <label>
+                <input maxlength="10" type="text" placeholder="Fecha de nacimiento">
+            </label>
+            <h5>Estado civil</h5>
+            <input type="radio" id="married" name="estado_civil" value="married">
+            <label for="married">Casado/a</label>
+            <br>
+            <input type="radio" id="single" name="estado_civil" value="single">
+            <label for="single">Soltero/a</label>
+            <br>
+            <input type="radio" id="widow" name="estado_civil" value="widow">
+            <label for="widow">Viudo/a</label>
+
+            <h5>Dirección</h5>
+            <label>
+                <input type="text" placeholder="Calle">
+            </label>
+            <label>
+                <input type="text" placeholder="Provincia">
+            </label>
+            <label>
+                <input type="text" placeholder="Codigo Postal">
+            </label>
+
+            <input id="image_select" type="file" />
+            <label>
+                <textarea placeholder="Comentarios..."></textarea>
+            </label>
+            <button type="submit">Enviar</button>
+            <button type="reset">Cancelar</button>
+        </form>
+    </div>
+</body>
+</html>
