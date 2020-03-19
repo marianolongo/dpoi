@@ -1,0 +1,26 @@
+body{
+    display: flex;
+    justify-content: center;
+}
+
+.main-container{
+    width: 600px
+}
+
+.navbar{
+    justify-content: center;
+    display: flex;
+}
+
+.title-container{
+    justify-content: center;
+    display: flex;
+}
+footer{
+    justify-content: center;
+    display: flex;
+}
+
+#song{
+    text-align: center;
+}

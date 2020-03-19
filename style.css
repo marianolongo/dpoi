@@ -1,0 +1,9 @@
+.user-form{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    background-color: lightgrey;
+    border: 2px solid grey;
+    border-radius: 20px;
+    padding: 20px;
+}

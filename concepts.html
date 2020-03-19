@@ -2,110 +2,143 @@
 <html lang="en">
 <head>
     <title>Concepts</title>
+    <link rel="stylesheet" href="theme.css">
+    <link rel="stylesheet" href="print.css" media="print">
+    <link id="layout" rel="stylesheet" href="horizontal.css">
+    <script>
+        function changeDisplay() {
+            const layout = document.getElementById("layout");
+            if(layout.href.includes("horizontal.css")){
+                layout.href = "vertical.css"
+            }else{
+                layout.href = "horizontal.css"
+            }
+        }
+    </script>
 </head>
 <body>
-    <div>
-        <a href="#song">Canción</a>
-        <a href="#definitions">Definiciones</a>
+<div class="main-container">
+    <div class="title-container">
+        <h1 onclick="changeDisplay()" class="title pointer">Trabajo Practico DPOI</h1>
     </div>
-    <div id="song">
-        <p>Es incorrecto el uso del tag br ya que todo lo relacionado con el estilo de una pagina deberia estar contemplado en el css. El HTML solamente deberia tener la estructura de la pagina.</p>
-        <p>Un buen uso del tag se puede ver en la letra de la siguiente canción</p>
-        <p>
-            On a cold winter morning<br/>
-            In the time before the light<br/>
-            In flames of death's eternal reign<br/>
-            We ride towards the fight<br/>
-            When the darkness has fallen down<br/>
-            And the times are tough alright<br/>
-            The sound of evil laughter falls<br/>
-            Around the world tonight<br/>
-            Fighting hard, fighting on for the steel<br/>
-            Through the wastelands evermore<br/>
-            The scattered souls will feel the hell<br/>
-            Bodies wasted on the shores<br/>
-            On the blackest plains in Hell's domain<br/>
-            We watch them as they go<br/>
-            Through the fire and pain and once again we know<br/>
-            So now we fly ever free<br/>
-            We're free before the thunderstorm<br/>
-            On towards the wilderness<br/>
-            Our quest carries on<br/>
-            Far beyond the sundown<br/>
-            Far beyond the moonlight<br/>
-            Deep inside our hearts and all our souls<br/>
-            So far away we wait for the day<br/>
-            For the lives all so wasted and gone<br/>
-            We feel the pain of a lifetime lost in a thousand days<br/>
-            Through the fire and the flames we carry on<br/>
-            As the red day is dawning<br/>
-            And the lightning cracks the sky<br/>
-            They'll raise their hands to the heavens above<br/>
-            With resentment in their eyes<br/>
-            Running back through the mid morning light<br/>
-            There's a burning in my heart<br/>
-            We're banished from a time in a fallen land<br/>
-            To a life beyond the stars<br/>
-            In your darkest dreams see to believe<br/>
-            Our destiny is time<br/>
-            And endlessly we'll all be free tonight<br/>
-            And on the wings of a dream<br/>
-            So far beyond reality<br/>
-            All alone in desperation<br/>
-            Now the time has gone<br/>
-            Lost inside you'll never find<br/>
-            Lost within my own mind<br/>
-            Day after day this misery must go on<br/>
-            So far away we wait for the day<br/>
-            For the lives all so wasted and gone<br/>
-            We feel the pain of a lifetime lost in a thousand days<br/>
-            Through the fire and the flames we carry on<br/>
-            Woah, woah, whoah<br/>
-            Woah, woah, whoah<br/>
-            Now here we stand with their blood on our hands<br/>
-            We fought so hard, now can we understand<br/>
-            I'll break the seal of this curse if I possibly can<br/>
-            For freedom of every man<br/>
-            So far away we wait for the day<br/>
-            For the lives all so wasted and gone<br/>
-            We feel the pain of a lifetime lost in a thousand days<br/>
-            Through the fire and the flames we carry on<br/>
-        </p>
-    </div>
-    <div id="definitions">
-        <ul>
-            <li>
-                <h5>URI</h5>
-                <p>
-                    Cadena de caracteres que identifica un recurso abstracto o físico
-                </p>
-            </li>
-            <li>
-                <h5>URL</h5>
-                <p>
-                    Uniform Resource Locator. La dirección específica que se asigna a cada uno de los recursos disponibles en la red (Para que puedan ser localizados o identificados)
-                </p>
-            </li>
-            <li>
-                <h5>HTML</h5>
-                <p>
-                    Hyper Text Markkup Language. Se encarga de desarrollar una descripción sobre los contenidos que aparecen como textos y sobre su estructura, complementando dicho texto con diversos objetos
-                </p>
-            </li>
-            <li>
-                <h5>XHTML</h5>
-                <p>
-                    eXtensible HyperText Markup Language. HTML expresado como XML valido. Es mas estricto a nivel tecnico. Por ejemplo, si o si hay que cerrar los tags.
-                </p>
-            </li>
-            <li>
-                <h5>CSS</h5>
-                <p>
-                    Cascading Style Sheets. Sirve para determinar la manera en la que se va a presentar el contenido de distintos lenguajes de markup (Por ejemplo HTML)
-                </p>
-            </li>
+    <div class="navbar-and-content">
+        <div class="navbar">
+            <ul>
+                <li><a href="#song">Cancion</a></li>
+                <li><a href="#definitions">Definiciones</a></li>
+            </ul>
+        </div>
+        <div id="song">
+            <h3>El problema con el tag br</h3>
+            <p>Es incorrecto el uso del tag br ya que todo lo relacionado con el estilo de una pagina deberia estar
+                contemplado en el css. El HTML solamente deberia tener la estructura de la pagina.</p>
+            <p>Un buen uso del tag se puede ver en la letra de la siguiente cancion</p>
+            <p>
+                On a cold winter morning<br/>
+                In the time before the light<br/>
+                In flames of death's eternal reign<br/>
+                We ride towards the fight<br/>
+                When the darkness has fallen down<br/>
+                And the times are tough alright<br/>
+                The sound of evil laughter falls<br/>
+                Around the world tonight<br/>
+                Fighting hard, fighting on for the steel<br/>
+                Through the wastelands evermore<br/>
+                The scattered souls will feel the hell<br/>
+                Bodies wasted on the shores<br/>
+                On the blackest plains in Hell's domain<br/>
+                We watch them as they go<br/>
+                Through the fire and pain and once again we know<br/>
+                So now we fly ever free<br/>
+                We're free before the thunderstorm<br/>
+                On towards the wilderness<br/>
+                Our quest carries on<br/>
+                Far beyond the sundown<br/>
+                Far beyond the moonlight<br/>
+                Deep inside our hearts and all our souls<br/>
+                So far away we wait for the day<br/>
+                For the lives all so wasted and gone<br/>
+                We feel the pain of a lifetime lost in a thousand days<br/>
+                Through the fire and the flames we carry on<br/>
+                As the red day is dawning<br/>
+                And the lightning cracks the sky<br/>
+                They'll raise their hands to the heavens above<br/>
+                With resentment in their eyes<br/>
+                Running back through the mid morning light<br/>
+                There's a burning in my heart<br/>
+                We're banished from a time in a fallen land<br/>
+                To a life beyond the stars<br/>
+                In your darkest dreams see to believe<br/>
+                Our destiny is time<br/>
+                And endlessly we'll all be free tonight<br/>
+                And on the wings of a dream<br/>
+                So far beyond reality<br/>
+                All alone in desperation<br/>
+                Now the time has gone<br/>
+                Lost inside you'll never find<br/>
+                Lost within my own mind<br/>
+                Day after day this misery must go on<br/>
+                So far away we wait for the day<br/>
+                For the lives all so wasted and gone<br/>
+                We feel the pain of a lifetime lost in a thousand days<br/>
+                Through the fire and the flames we carry on<br/>
+                Woah, woah, whoah<br/>
+                Woah, woah, whoah<br/>
+                Now here we stand with their blood on our hands<br/>
+                We fought so hard, now can we understand<br/>
+                I'll break the seal of this curse if I possibly can<br/>
+                For freedom of every man<br/>
+                So far away we wait for the day<br/>
+                For the lives all so wasted and gone<br/>
+                We feel the pain of a lifetime lost in a thousand days<br/>
+                Through the fire and the flames we carry on<br/>
+            </p>
+        </div>
+        <div id="definitions">
+            <h3>Definiciones</h3>
+            <ul>
+                <li>
+                    <h5>URI</h5>
+                    <p>
+                        Cadena de caracteres que identifica un recurso abstracto o físico
+                    </p>
+                </li>
+                <li>
+                    <h5>URL</h5>
+                    <p>
+                        Uniform Resource Locator. La dirección específica que se asigna a cada uno de los recursos
+                        disponibles en la red (Para que puedan ser localizados o identificados)
+                    </p>
+                </li>
+                <li>
+                    <h5>HTML</h5>
+                    <p>
+                        Hyper Text Markkup Language. Se encarga de desarrollar una descripción sobre los contenidos que
+                        aparecen como textos y sobre su estructura, complementando dicho texto con diversos objetos
+                    </p>
+                </li>
+                <li>
+                    <h5>XHTML</h5>
+                    <p>
+                        eXtensible HyperText Markup Language. HTML expresado como XML valido. Es mas estricto a nivel
+                        tecnico. Por ejemplo, si o si hay que cerrar los tags.
+                    </p>
+                </li>
+                <li>
+                    <h5>CSS</h5>
+                    <p>
+                        Cascading Style Sheets. Sirve para determinar la manera en la que se va a presentar el contenido
+                        de
+                        distintos lenguajes de markup (Por ejemplo HTML)
+                    </p>
+                </li>
 
-        </ul>
+            </ul>
+        </div>
     </div>
+    <footer>
+        <h3>Mariano Longo</h3>
+    </footer>
+</div>
 </body>
 </html>
