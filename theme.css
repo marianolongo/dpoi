@@ -173,3 +173,13 @@ footer {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
 }
+
+.dialog{
+    width: 60%;
+}
+
+.dialog-form-container{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}

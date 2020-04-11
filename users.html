@@ -7,6 +7,131 @@
     <script type="text/javascript" src="script.js"></script>
 </head>
 <body>
+    <dialog class="dialog" id="view-person-dialog">
+        <div class="dialog-form-container">
+            <form class="user-form">
+                <label for="view-input-id">
+                    ID
+                    <input disabled id="view-input-id" type="text"/>
+                </label>
+                <h3>Persona</h3>
+                <label for="view-input-name">
+                    Nombre
+                    <input disabled id="view-input-name" type="text" placeholder="Nombre"/>
+                </label>
+                <label for="view-input-lastname">
+                    Apellido
+                    <input disabled id="view-input-lastname" type="text" placeholder="Apellido">
+                </label>
+                <label for="view-input-mail">
+                    Email
+                    <input disabled id="view-input-mail" type="text" placeholder="Mail">
+                </label>
+                <label for="view-input-phone">
+                    Telefono
+                    <input disabled id="view-input-phone" type="number" placeholder="Telefono">
+                </label>
+                <label for="view-input-birthday">
+                    Fecha nacimiento
+                    <input disabled id="view-input-birthday" maxlength="10" type="text" placeholder="Fecha de nacimiento">
+                </label>
+                <h3>Estado civil</h3>
+                <div class="radio-toolbar">
+                    <input disabled type="radio" id="view-married" name="estado_civil" value="married">
+                    <label for="view-married">Casado/a</label>
+                    <br>
+                    <input disabled type="radio" id="view-single" name="estado_civil" value="single">
+                    <label for="view-single">Soltero/a</label>
+                    <br>
+                    <input disabled type="radio" id="view-widow" name="estado_civil" value="widow">
+                    <label for="view-widow">Viudo/a</label>
+                </div>
+                <h3>Direccion</h3>
+                <label for="view-input-street">
+                    Calle
+                    <input disabled id="view-input-street" type="text" placeholder="Calle">
+                </label>
+                <label for="view-input-province">
+                    Provincia
+                    <input disabled id="view-input-province" type="text" placeholder="Provincia">
+                </label>
+                <label for="view-input-zipcode">
+                    Codigo postal
+                    <input disabled id="view-input-zipcode" type="text" placeholder="Codigo Postal">
+                </label>
+                <label for="view-input-created">
+                    Fecha y hora creacion
+                    <input disabled id="view-input-created" type="text" placeholder="Creado">
+                </label>
+                <label for="view-input-host">
+                    Host
+                    <input disabled id="view-input-host" type="text" placeholder="Host">
+                </label>
+                <div class="buttons-container">
+                    <button onclick="window['view-person-dialog'].close()" class="custom-button" type="reset">Cancelar</button>
+                </div>
+            </form>
+        </div>
+    </dialog>
+    <dialog class="dialog" id="edit-person-dialog">
+        <div class="dialog-form-container">
+            <form class="user-form">
+                <label for="edit-input-id">
+                    ID
+                    <input disabled id="edit-input-id" type="text"/>
+                </label>
+                <h3>Persona</h3>
+                <label for="edit-input-name">
+                    Nombre
+                    <input id="edit-input-name" type="text"/>
+                </label>
+                <label for="edit-input-lastname">
+                    Apellido
+                    <input id="edit-input-lastname" type="text">
+                </label>
+                <label for="edit-input-mail">
+                    Email
+                    <input id="edit-input-mail" type="text">
+                </label>
+                <label for="edit-input-phone">
+                    Telefono
+                    <input id="edit-input-phone" type="number">
+                </label>
+                <label for="edit-input-birthday">
+                    Fecha nacimiento
+                    <input id="edit-input-birthday" maxlength="10" type="text">
+                </label>
+                <h3>Estado civil</h3>
+                <div class="radio-toolbar">
+                    <input type="radio" id="edit-married" name="estado_civil" value="married">
+                    <label for="edit-married">Casado/a</label>
+                    <br>
+                    <input type="radio" id="edit-single" name="estado_civil" value="single">
+                    <label for="edit-single">Soltero/a</label>
+                    <br>
+                    <input type="radio" id="edit-widow" name="estado_civil" value="widow">
+                    <label for="edit-widow">Viudo/a</label>
+                </div>
+                <h3>Direccion</h3>
+                <label for="edit-input-street">
+                    Calle
+                    <input id="edit-input-street" type="text">
+                </label>
+                <label for="edit-input-province">
+                    Provincia
+                    <input id="edit-input-province" type="text">
+                </label>
+                <label for="edit-input-zipcode">
+                    Codigo postal
+                    <input id="edit-input-zipcode" type="text">
+                </label>
+                <div class="buttons-container">
+                    <button onclick="editPerson(event)" class="custom-button" type="submit">Editar persona</button>
+                    <button onclick="window['edit-person-dialog'].close()" class="custom-button" type="reset">Cancelar</button>
+                </div>
+            </form>
+        </div>
+    </dialog>
     <div id="table-container">
         <div id="table-loader" class="loader"></div>
         <table id="persons-table" style="display: none">
@@ -30,19 +155,19 @@
         <form class="user-form">
             <h3>Persona</h3>
             <label>
-                <input type="text" placeholder="Nombre"/>
+                <input id="input-name" type="text" placeholder="Nombre"/>
             </label>
             <label>
-                <input type="text" placeholder="Apellido">
+                <input id="input-lastname" type="text" placeholder="Apellido">
             </label>
             <label>
-                <input type="text" placeholder="Mail">
+                <input id="input-mail" type="text" placeholder="Mail">
             </label>
             <label>
-                <input type="number" placeholder="Telefono">
+                <input id="input-phone" type="number" placeholder="Telefono">
             </label>
             <label>
-                <input maxlength="10" type="text" placeholder="Fecha de nacimiento">
+                <input id="input-birthday" maxlength="10" type="text" placeholder="Fecha de nacimiento">
             </label>
             <label class="image-picker-label" for="image_select">
                 Seleccionar imagen
@@ -61,19 +186,19 @@
             </div>
             <h3>Direccion</h3>
             <label>
-                <input type="text" placeholder="Calle">
+                <input id="input-street" type="text" placeholder="Calle">
             </label>
             <label>
-                <input type="text" placeholder="Provincia">
+                <input id="input-province" type="text" placeholder="Provincia">
             </label>
             <label>
-                <input type="text" placeholder="Codigo Postal">
+                <input id="input-zipcode" type="text" placeholder="Codigo Postal">
             </label>
             <label>
                 <textarea placeholder="Comentarios..."></textarea>
             </label>
             <div class="buttons-container">
-                <button class="custom-button" type="submit">Enviar</button>
+                <button onclick="createPerson(event)" class="custom-button" type="submit">Enviar</button>
                 <button class="custom-button" type="reset">Cancelar</button>
             </div>
         </form>
